@@ -28,14 +28,6 @@ class MakeTemplate extends GeneratorCommand
      */
     public function handle()
     {
-
-        $rootPath = dirname(base_path());
-
-        $path = $rootPath.'/frontend/src/views/crafted/mosque/NewMosque.vue';
-        $this->files->makeDirectory(dirname($path), 0777, true, true);
-
-        $this->files->put($path, '$this->sortImports($this->buildClass($name))');
-
     }
 
     protected function getStub()

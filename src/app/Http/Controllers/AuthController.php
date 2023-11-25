@@ -12,7 +12,7 @@ class AuthController extends BaseController
         $credentials = \request()->only('email', 'password');
 
         return Auth::attempt($credentials) ?
-            jsonSuccess('باموفقیت وارد سیستم شدید', ["user" => Auth::user()->returnable()]) :
-            jsonError('نام کاربری یا گذرواژه اشتباه است');
+            jsonSuccess('success', ["user" => Auth::user()->returnable()]) :
+            jsonError('error');
     }
 }
